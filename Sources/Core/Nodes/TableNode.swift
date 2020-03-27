@@ -48,16 +48,21 @@ public class TableNode: ASDisplayNode, ASTextNodeDelegate, Linkable {
     ///     - table: The markdown table.
     ///     - style: The document style.
     private func setupTable(_ table: Table, style: DocumentStyle) {
+        func appendSeparator(heightFactor: CGFloat) {
+            let separator = ASDisplayNode()
+            separator.backgroundColor = style.colors.horizontalRule
+            let height = style.values.horizontalRuleHeight * heightFactor
+            separator.style.flexBasis = ASDimensionMake(height)
+            separator.style.spacingBefore = 5.0
+            tableRows.append(separator)
+        }
         tableRows.append(TableRowNode(row: table.header, table: table, style: style))
-
-        let separator = ASDisplayNode()
-        separator.backgroundColor = style.colors.horizontalRule
-        separator.style.flexBasis = ASDimensionMake(style.values.horizontalRuleHeight)
-        separator.style.spacingBefore = 5.0
-        tableRows.append(separator)
-
-        for row in table.rows {
+        appendSeparator(heightFactor: 2)
+        for (index, row) in table.rows.enumerated() {
             tableRows.append(TableRowNode(row: row, table: table, style: style))
+            if index != table.rows.count - 1 {
+                appendSeparator(heightFactor: 1)
+            }
         }
     }
 
@@ -70,7 +75,7 @@ public class TableNode: ASDisplayNode, ASTextNodeDelegate, Linkable {
         }
 
         let stack = ASStackLayoutSpec(direction: .vertical,
-                                      spacing: 0.0,
+                                      spacing: 4,
                                       justifyContent: .start,
                                       alignItems: .stretch,
                                       children: tableRows)

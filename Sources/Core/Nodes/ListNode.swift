@@ -78,11 +78,10 @@ public class ListNode: ASDisplayNode, ASTextNodeDelegate, Linkable, LinkDelegate
             }
 
             let listNumTextNode = ASTextNode()
-            listNumTextNode.style.flexBasis = ASDimensionMake(30.0)
             listNumTextNode.attributedText = NSAttributedString(string: listNum, attributes: attribs)
 
             let stackSpec = ASStackLayoutSpec(direction: .horizontal,
-                                              spacing: 0.0,
+                                              spacing: 8,
                                               justifyContent: .start,
                                               alignItems: .start,
                                               children: [listNumTextNode, valueNode])

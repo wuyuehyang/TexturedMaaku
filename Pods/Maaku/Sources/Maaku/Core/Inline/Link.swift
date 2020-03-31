@@ -113,15 +113,15 @@ public extension Link {
             attributed.append(item.attributedText(style: style))
         }
 
+        var attributes: [NSAttributedString.Key: Any] = [
+            .font: style.fonts.current,
+            .foregroundColor: style.colors.link,
+            .underlineColor: style.colors.linkUnderline
+        ]
         if let url = self.url {
-            let attributes: [NSAttributedString.Key: Any] = [
-                .font: style.fonts.current,
-                .foregroundColor: style.colors.link,
-                .link: url,
-                .underlineColor: style.colors.linkUnderline
-            ]
-            attributed.addAttributes(attributes, range: NSRange(location: 0, length: attributed.string.utf16.count))
+            attributes[.link] = url
         }
+        attributed.addAttributes(attributes, range: NSRange(location: 0, length: attributed.string.utf16.count))
 
         return attributed
     }

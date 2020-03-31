@@ -75,18 +75,18 @@ public extension CMNode {
         }
     }
 
-    func setDestination(_ newValue: String) throws {
+    func setLinkDestination(_ newValue: String) throws {
         // cmark_node_set_url copies the string
         if cmark_node_set_url(cmarkNode, newValue) != 1 {
             throw ASTError.canNotSetValue
         }
     }
 
-    func setURL(_ newValue: URL) throws {
-        try setDestination(newValue.absoluteString)
+    func setLinkURL(_ newValue: URL) throws {
+        try setLinkDestination(newValue.absoluteString)
     }
 
-    func setTitle(_ newValue: String) throws {
+    func setLinkTitle(_ newValue: String) throws {
         // cmark_node_set_title copies the string
         if cmark_node_set_title(cmarkNode, newValue) != 1 {
             throw ASTError.canNotSetValue
@@ -96,6 +96,12 @@ public extension CMNode {
     func setLiteral(_ newValue: String) throws {
         // cmark_node_set_literal copies the string
         if cmark_node_set_literal(cmarkNode, newValue) != 1 {
+            throw ASTError.canNotSetValue
+        }
+    }
+
+    func setTaskCompleted(_ newValue: Bool) throws {
+        if cmark_gfm_extensions_set_tasklist_item_checked(cmarkNode, newValue) != 1 {
             throw ASTError.canNotSetValue
         }
     }

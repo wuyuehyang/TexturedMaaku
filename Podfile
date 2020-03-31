@@ -5,9 +5,9 @@ use_frameworks!
 
 abstract_target 'TexturedMaakuTargets' do
   pod 'Highlightr', :git => 'https://github.com/raspu/Highlightr.git', :branch => 'master'
-  pod 'Maaku/CMark'
-  pod 'Maaku/Core'
-  pod 'Maaku/Plugins'
+  pod 'Maaku/CMark', :git => 'https://github.com/wuyuehyang/Maaku.git', :branch => 'mixin'
+  pod 'Maaku/Core', :git => 'https://github.com/wuyuehyang/Maaku.git', :branch => 'mixin'
+  pod 'Maaku/Plugins', :git => 'https://github.com/wuyuehyang/Maaku.git', :branch => 'mixin'
   pod 'SwiftLint'
   pod 'Texture'
   pod 'youtube-ios-player-helper'

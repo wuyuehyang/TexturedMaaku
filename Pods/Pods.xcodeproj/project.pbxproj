@@ -5329,37 +5329,6 @@
 			};
 			name = Debug;
 		};
-		4BA6468B2B3181279C0E133CC5FAB05E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6798F8DB4268EF37CC7EB04E5395CC5 /* Highlightr.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Highlightr/Highlightr-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Highlightr/Highlightr-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Highlightr/Highlightr.modulemap";
-				PRODUCT_MODULE_NAME = Highlightr;
-				PRODUCT_NAME = Highlightr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4DD99CBDE8796EDC34BA64867F42318B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D5853215BCCD47153E421C30E9FB81D /* Quick.release.xcconfig */;
@@ -5818,6 +5787,38 @@
 			};
 			name = Debug;
 		};
+		BD04E2F154D1E64BA8EF281315DE0BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0958989FF541A17A7ABEFD3731287E9D /* Highlightr.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Highlightr/Highlightr-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Highlightr/Highlightr-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Highlightr/Highlightr.modulemap";
+				PRODUCT_MODULE_NAME = Highlightr;
+				PRODUCT_NAME = Highlightr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C4CDEBACC891978EE2EC5DC2873EDC0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 97784C4AF0FC368BE89EA8DAA7D651CE /* Pods-TexturedMaakuTargets-TexturedMaakuSyntaxColors.debug.xcconfig */;
@@ -5883,9 +5884,9 @@
 			};
 			name = Release;
 		};
-		D6B786DFBD61282897706D1367EE5ED0 /* Release */ = {
+		DD79562265D7459B05D08602DB233F71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0958989FF541A17A7ABEFD3731287E9D /* Highlightr.release.xcconfig */;
+			baseConfigurationReference = F6798F8DB4268EF37CC7EB04E5395CC5 /* Highlightr.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -5907,13 +5908,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		E10B1F1D13BF5C4D177DFF33A96400F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -6136,8 +6136,8 @@
 		AA8EB4605C77C3B76FD2E28AAD11B79C /* Build configuration list for PBXNativeTarget "Highlightr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4BA6468B2B3181279C0E133CC5FAB05E /* Debug */,
-				D6B786DFBD61282897706D1367EE5ED0 /* Release */,
+				DD79562265D7459B05D08602DB233F71 /* Debug */,
+				BD04E2F154D1E64BA8EF281315DE0BEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

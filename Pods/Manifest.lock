@@ -48,7 +48,7 @@ PODS:
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
-  - Highlightr (from `https://github.com/raspu/Highlightr.git`, branch `master`)
+  - Highlightr (from `https://github.com/wuyuehyang/Highlightr.git`, branch `master`)
   - Maaku/CMark (from `https://github.com/wuyuehyang/Maaku.git`, branch `mixin`)
   - Maaku/Core (from `https://github.com/wuyuehyang/Maaku.git`, branch `mixin`)
   - Maaku/Plugins (from `https://github.com/wuyuehyang/Maaku.git`, branch `mixin`)
@@ -73,21 +73,21 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Highlightr:
     :branch: master
-    :git: https://github.com/raspu/Highlightr.git
+    :git: https://github.com/wuyuehyang/Highlightr.git
   Maaku:
     :branch: mixin
     :git: https://github.com/wuyuehyang/Maaku.git
 
 CHECKOUT OPTIONS:
   Highlightr:
-    :commit: 87465e7ac116a4c8672fa29aae840e9c9e68bedb
-    :git: https://github.com/raspu/Highlightr.git
+    :commit: 9b9fc465efecb7b3c039c8fedc66e4ae4f315ad9
+    :git: https://github.com/wuyuehyang/Highlightr.git
   Maaku:
     :commit: 7fef73d1397f32f4c8a66468e1b2d6a8f1bd63ba
     :git: https://github.com/wuyuehyang/Maaku.git
 
 SPEC CHECKSUMS:
-  Highlightr: 683f05d5223cade533a78528a35c9f06e4caddf8
+  Highlightr: c687b337a60af6e46a478b4376006168bb5bd7c5
   libcmark_gfm: cbf2fe0fd3983202f00b40d4742d82cd173ff7c3
   Maaku: a928605d6157439001f211f2905176cc6a18dd7b
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
@@ -99,6 +99,6 @@ SPEC CHECKSUMS:
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 6881128abf3a9382a1ea1268350659491c81c18d
+PODFILE CHECKSUM: c2e901e836fa69fca591c31292a31b83a1514f59
 
 COCOAPODS: 1.9.1

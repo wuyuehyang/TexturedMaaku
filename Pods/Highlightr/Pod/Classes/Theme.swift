@@ -152,7 +152,8 @@ open class Theme {
         }
         else
         {
-            returnString = NSAttributedString(string: string, attributes:[AttributedStringKey.font:codeFont] )
+            let font: UIFont = codeFont
+            returnString = NSAttributedString(string: string, attributes:[AttributedStringKey.font:font] )
         }
         
         return returnString

@@ -29,7 +29,7 @@ public protocol DocumentNodeDelegate: class {
 }
 
 /// Represents a markdown document as an ASDisplayNode.
-public class DocumentNode: ASDisplayNode {
+open class DocumentNode: ASDisplayNode {
 
     /// The number formatter.
     private lazy var numberFormatter: NumberFormatter = {
@@ -44,7 +44,7 @@ public class DocumentNode: ASDisplayNode {
     public weak var delegate: DocumentNodeDelegate?
 
     /// The collection node.
-    private let collectionNode: ASCollectionNode
+    public let collectionNode: ASCollectionNode
 
     /// The collection view layout.
     private let collectionViewLayout: UICollectionViewFlowLayout
@@ -110,7 +110,7 @@ public class DocumentNode: ASDisplayNode {
     }
 
     /// Setup collection view.
-    private func setupCollectionView() {
+    open func setupCollectionView() {
         collectionNode.dataSource = self
         collectionNode.delegate = self
         collectionNode.view.scrollsToTop = true
@@ -164,7 +164,7 @@ extension DocumentNode: ASCollectionDataSource {
         return document.items.count
     }
 
-    public func collectionView(_ collectionView: ASCollectionView, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
+    open func collectionView(_ collectionView: ASCollectionView, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
         guard indexPath.item < document.items.count else {
             return ASCellNode()
         }
